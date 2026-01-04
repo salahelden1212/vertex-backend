@@ -27,12 +27,12 @@ app.use(helmet({
 }));
 app.use(mongoSanitize());
 
-// CORS Configuration
+// CORS Middleware (MUST be before routes)
 app.use(cors({
   origin: [
     'https://vertex-frontend-psi.vercel.app',
     'http://localhost:5173'
-  ]
+  ],
   credentials: true
 }));
 
